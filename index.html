@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ola Liebiediewa – Nauczycielka angielskiego</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --light-blue: #b3cde0;
+      --blue: #6497b1;
+      --purple: #8367c7;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--purple);
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--light-blue);
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--light-blue), var(--purple));
+      color: var(--white);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background-color: var(--white);
+      color: var(--purple);
+      padding: 12px 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: var(--light-blue);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--purple);
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about img {
+      max-width: 300px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .offer-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .offer-item {
+      background-color: var(--light-blue);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .offer-item h3 {
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    footer {
+      background-color: var(--purple);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: var(--light-blue);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Ola Liebiediewa</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">O mnie</a></li>
+          <li><a href="#offer">Oferta</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Naucz się angielskiego z pasją</h2>
+      <p>Nowoczesne lekcje angielskiego – indywidualne podejście i dobra atmosfera!</p>
+      <a href="#contact" class="btn">Umów się na lekcję</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>O mnie</h2>
+      <img src="photo_2025-06-15_12-24-43.jpg" alt="Ola Liebiediewa">
+      <p>
+        Cześć! Mam na imię Ola i jestem pasjonatką języka angielskiego. Uczę dzieci, młodzież i dorosłych w sposób, który motywuje, daje efekty i... sprawia radość! 
+        Zajęcia prowadzę online oraz stacjonarnie. Do zobaczenia na lekcji!
+      </p>
+    </div>
+  </section>
+
+  <section id="offer">
+    <div class="container">
+      <h2>Oferta</h2>
+      <div class="offer-items">
+        <div class="offer-item">
+          <h3>Dzieci</h3>
+          <p>Nauka poprzez zabawę – kolorowo, kreatywnie i skutecznie.</p>
+        </div>
+        <div class="offer-item">
+          <h3>Młodzież</h3>
+          <p>Przygotowanie do egzaminów, matury, pomoc w szkole.</p>
+        </div>
+        <div class="offer-item">
+          <h3>Dorośli</h3>
+          <p>Konwersacje, angielski w pracy i na wakacje, Business English.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Twoje imię" required>
+        <input type="email" name="email" placeholder="Twój e-mail" required>
+        <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+        <button type="submit" class="btn">Wyślij</button>
+      </form>
+    </div>
+  </section>
+ <p><a href="mailto:lebedevaolga253@gmail.com">lebedevaolga253@gmail.com</a> | tel. 512-782-966/ | tel. +380-66-809-95-43</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ola Liebiediewa – Wszystkie prawa zastrzeżone</p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
