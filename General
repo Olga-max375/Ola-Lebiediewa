@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новости — Tuning Club Online</title>
+  <style>
+    body {
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      color: #0f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #0f0;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    input, textarea {
+      background-color: #333;
+      color: #fff;
+    }
+
+    button {
+      background-color: #0f0;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .post {
+      background-color: #222;
+      padding: 15px;
+      margin-top: 15px;
+      border-left: 4px solid #0f0;
+      border-radius: 5px;
+    }
+
+    .post h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #777;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tuning Club Online — Новости</h1>
+  </header>
+
+  <div class="container">
+    <h2>Добавить новую информацию</h2>
+    <input type="text" id="titleInput" placeholder="Заголовок" />
+    <textarea id="contentInput" placeholder="Текст сообщения..." rows="5"></textarea>
+    <button onclick="addPost()">Опубликовать</button>
+
+    <div id="posts">
+      <!-- Тут будут появляться новости -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tuning Club Online Fan Site. Сделано с ❤️
+  </footer>
+
+  <script>
+    function addPost() {
+      const title = document.getElementById("titleInput").value;
+      const content = document.getElementById("contentInput").value;
+
+      if (title.trim() === "" || content.trim() === "") {
+        alert("Пожалуйста, заполните все поля!");
+        return;
+      }
+
+      const postDiv = document.createElement("div");
+      postDiv.className = "post";
+
+      const postTitle = document.createElement("h3");
+      postTitle.textContent = title;
+
+      const postContent = document.createElement("p");
+      postContent.textContent = content;
+
+      postDiv.appendChild(postTitle);
+      postDiv.appendChild(postContent);
+
+      document.getElementById("posts").prepend(postDiv);
+
+      document.getElementById("titleInput").value = "";
+      document.getElementById("contentInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
